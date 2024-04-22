@@ -46,20 +46,9 @@
     display: block;
     position: relative;
     margin: auto;
-    width: 38.1875em;
-    height: 53.8125em;
+    width: 50.6875em;
+    height: 41.3125em;
     font-size: min(1.4vw, 1em);
-  }
-  #sidebyside .image-box:before {
-    content: '';
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    background: var(--primary);
-    opacity: 1;
-    top: 2.5em;
-    left: -2.5em;
   }
   #sidebyside .image-box:after {
     content: '';
@@ -67,10 +56,6 @@
     display: block;
     height: 32.25em;
     width: 28.75em;
-    background: url("/images/content-circles.svg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
     opacity: 1;
     top: -14.125em;
     right: -6.8125em;
@@ -94,7 +79,7 @@
 /* Small Desktop */
 @media only screen and (min-width: 1300px) {
   #sidebyside {
-    padding: 9.375em 0;
+    padding: 6.25em 0;
   }
   #sidebyside .container {
     max-width: 86.9375em;
@@ -159,20 +144,9 @@
     display: block;
     position: relative;
     margin: auto;
-    width: 38.1875em;
-    height: 53.8125em;
+    width: 50.6875em;
+    height: 41.3125em;
     font-size: min(1.4vw, 1em);
-  }
-  #sidebyside-reverse .image-box:before {
-    content: '';
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    background: var(--primary);
-    opacity: 1;
-    top: 2.5em;
-    left: -2.5em;
   }
   #sidebyside-reverse .image-box:after {
     content: '';
@@ -180,10 +154,6 @@
     display: block;
     height: 32.25em;
     width: 28.75em;
-    background: url("/images/content-circles.svg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
     opacity: 1;
     top: -14.125em;
     right: -6.8125em;
@@ -207,7 +177,7 @@
 /* Small Desktop */
 @media only screen and (min-width: 1300px) {
   #sidebyside-reverse {
-    padding: 9.375em 0;
+    padding: 6.25em 0;
   }
   #sidebyside-reverse .container {
     max-width: 86.9375em;
@@ -314,10 +284,6 @@
     display: block;
     height: 69.25em;
     width: 125em;
-    background: url("../images/cta-squares.svg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
     opacity: 1;
     bottom: 0;
     left: 50%;
@@ -350,5 +316,49 @@
 @media only screen and (min-width: 0em) {
   body.dark-mode #cta:after {
     display: none;
+  }
+}
+/*-- -------------------------- -->
+<---         SLIDESHOW          -->
+<--- -------------------------- -*/
+/* Mobile */
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  .slideshow {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #f7f5f2;
+    box-shadow: 0 7.8125em 15.625em rgba(0, 0, 0, 0.05);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .slideshow h1 {
+    font-size: 3em;
+    margin-bottom: 1.25em;
+    margin-top: 1.25em;
+    color: var(--primary);
+  }
+  .slideshow .slideshow-container {
+    display: flex;
+    white-space: nowrap;
+    animation: scrollLogo infinite linear;
+    padding: 3.125em 0;
+  }
+  .slideshow .slideshow-container .slide {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+  .slideshow .slideshow-container .slide .image-box {
+    flex: 0 0 auto;
+    margin: auto;
+  }
+  .slideshow .slideshow-container .slide .image-box img {
+    top: 0;
+    left: 0;
+    height: 14.25em;
+    width: 14.25em;
   }
 }

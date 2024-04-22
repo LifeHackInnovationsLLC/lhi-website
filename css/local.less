@@ -54,21 +54,10 @@
             display: block;
             position: relative;
             margin: auto;
-            width: 611/16em;
-            height: 861/16em;
+            width: 811/16em;
+            height: 661/16em;
             font-size:~"min(1.4vw, 1em)"; // scales the image-box down
 
-            &:before {
-                content: '';
-                position: absolute;
-                display: block;
-                height: 100%;
-                width: 100%;
-                background: var(--primary);
-                opacity: 1;
-                top: 40/16em;
-                left: -40/16em;
-            }
 
             &:after {
                 content: '';
@@ -76,10 +65,6 @@
                 display: block;
                 height: 516/16em;
                 width: 460/16em;
-                background: url("/images/content-circles.svg");
-                background-size: contain;
-                background-position: center;
-                background-repeat: no-repeat;
                 opacity: 1;
                 top: -226/16em;
                 right: -109/16em;
@@ -108,7 +93,7 @@
 /* Small Desktop */
 @media only screen and (min-width: 1300px) {
     #sidebyside {
-        padding: 150/16em 0;
+        padding: 100/16em 0;
         .container {
             max-width: 1391/16em;
             flex-direction: row;
@@ -184,21 +169,10 @@
             display: block;
             position: relative;
             margin: auto;
-            width: 611/16em;
-            height: 861/16em;
+            width: 811/16em;
+            height: 661/16em;
             font-size:~"min(1.4vw, 1em)"; // scales the image-box down
 
-            &:before {
-                content: '';
-                position: absolute;
-                display: block;
-                height: 100%;
-                width: 100%;
-                background: var(--primary);
-                opacity: 1;
-                top: 40/16em;
-                left: -40/16em;
-            }
 
             &:after {
                 content: '';
@@ -206,10 +180,6 @@
                 display: block;
                 height: 516/16em;
                 width: 460/16em;
-                background: url("/images/content-circles.svg");
-                background-size: contain;
-                background-position: center;
-                background-repeat: no-repeat;
                 opacity: 1;
                 top: -226/16em;
                 right: -109/16em;
@@ -238,7 +208,7 @@
 /* Small Desktop */
 @media only screen and (min-width: 1300px) {
     #sidebyside-reverse {
-        padding: 150/16em 0;
+        padding: 100/16em 0;
         .container {
             max-width: 1391/16em;
             flex-direction: row;
@@ -359,10 +329,6 @@
             display: block;
             height: 1108/16em;
             width: 2000/16em;
-            background: url("../images/cta-squares.svg");
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
             opacity: 1;
             bottom: 0;
             left: 50%;
@@ -401,6 +367,58 @@
         #cta {
             &:after {
                 display: none;
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---         SLIDESHOW          -->
+<--- -------------------------- -*/
+
+/* Mobile */
+/* Mobile */
+@media only screen and (min-width: 0em){
+    .slideshow {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        background-color: #f7f5f2;
+        box-shadow: 0 125/16em 250/16em rgba(0, 0, 0, 0.05);
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+
+
+        h1 {
+            font-size: 48/16em;
+            margin-bottom: 20/16em;
+            margin-top: 20/16em;
+            color: var(--primary);
+        }
+
+        .slideshow-container {
+            display: flex;
+            white-space: nowrap; // Ensure logos stay in a single line
+            animation: scrollLogo infinite linear;
+            padding: 50/16em 0;
+            
+            .slide {
+                flex: 0 0 auto;
+                width: 25%; // Adjust this value as needed
+                .image-box {
+                    flex: 0 0 auto;
+                    margin: auto;
+
+                    img {
+                        top: 0;
+                        left: 0;
+                        height: 228/16em;
+                        width: 228/16em;
+                        
+                    }
+                }
             }
         }
     }
