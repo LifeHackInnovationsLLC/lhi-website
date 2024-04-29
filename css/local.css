@@ -19,7 +19,7 @@
     max-width: 38.1875em;
   }
   #sidebyside .content h2 {
-    font-size: 3em;
+    font-size: 1.75em;
     margin-bottom: 0.875em;
   }
   #sidebyside .content p {
@@ -39,8 +39,15 @@
     margin-right: 0.625em;
     margin-top: 0.22222222em;
   }
-  #sidebyside .content .button-solid {
+  #sidebyside .content .button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+  #sidebyside .content .button-container .button-solid {
     margin-top: 1.78571429em;
+    align-self: center;
   }
   #sidebyside .image-box {
     display: block;
@@ -91,6 +98,10 @@
     margin: 0;
     width: 60%;
   }
+  #sidebyside .content h2 {
+    font-size: 3em;
+    margin-bottom: 0.875em;
+  }
   #sidebyside .image-box {
     margin: 0;
     margin-right: 10.625em;
@@ -117,7 +128,7 @@
     max-width: 38.1875em;
   }
   #sidebyside-reverse .content h2 {
-    font-size: 3em;
+    font-size: 1.75em;
     margin-bottom: 0.875em;
   }
   #sidebyside-reverse .content p {
@@ -137,8 +148,15 @@
     margin-right: 0.625em;
     margin-top: 0.22222222em;
   }
-  #sidebyside-reverse .content .button-solid {
+  #sidebyside-reverse .content .button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+  #sidebyside-reverse .content .button-container .button-solid {
     margin-top: 1.78571429em;
+    align-self: center;
   }
   #sidebyside-reverse .image-box {
     display: block;
@@ -189,6 +207,10 @@
     margin: 0;
     width: 60%;
     order: 1;
+  }
+  #sidebyside-reverse .content h2 {
+    font-size: 3em;
+    margin-bottom: 0.875em;
   }
   #sidebyside-reverse .image-box {
     margin: 0;
@@ -322,13 +344,13 @@
 <---         SLIDESHOW          -->
 <--- -------------------------- -*/
 /* Mobile */
-/* Mobile */
 @media only screen and (min-width: 0em) {
   .slideshow {
     width: 100%;
+    height: 100%;
     overflow: hidden;
     position: relative;
-    background-color: #f7f5f2;
+    background-color: #e7e7e7;
     box-shadow: 0 7.8125em 15.625em rgba(0, 0, 0, 0.05);
     align-items: center;
     justify-content: center;
@@ -336,20 +358,20 @@
     flex-direction: column;
   }
   .slideshow h1 {
-    font-size: 3em;
-    margin-bottom: 1.25em;
+    font-size: 1.5em;
     margin-top: 1.25em;
+    text-align: center;
     color: var(--primary);
   }
   .slideshow .slideshow-container {
     display: flex;
     white-space: nowrap;
     animation: scrollLogo infinite linear;
-    padding: 3.125em 0;
+    padding: 1em 0;
   }
   .slideshow .slideshow-container .slide {
     flex: 0 0 auto;
-    width: 25%;
+    width: 20%;
   }
   .slideshow .slideshow-container .slide .image-box {
     flex: 0 0 auto;
@@ -358,7 +380,27 @@
   .slideshow .slideshow-container .slide .image-box img {
     top: 0;
     left: 0;
-    height: 14.25em;
-    width: 14.25em;
+    height: 12.5em;
+    width: 19.25em;
+  }
+}
+/* Inbetween */
+@media only screen and (min-width: 666px) {
+  .slideshow {
+    width: 100%;
+  }
+  .slideshow h1 {
+    font-size: 2.125em;
+    margin-top: 1.25em;
+  }
+}
+/* Small Desktop */
+@media only screen and (min-width: 1300px) {
+  .slideshow {
+    width: 100%;
+  }
+  .slideshow h1 {
+    font-size: 3em;
+    margin-top: 1.25em;
   }
 }

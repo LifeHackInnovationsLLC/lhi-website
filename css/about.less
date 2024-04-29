@@ -6,7 +6,9 @@
 /* Mobile */
 @media only screen and (min-width: 0em) {
     #sidebyside {
-        padding: 50px 0;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: #000;
         .container {
             display: flex;
             justify-content: center;
@@ -17,27 +19,31 @@
         .content {
             order: 2;
             margin: auto;
-            margin-top: 75/16em;
+            margin-top: 45/16em;
             max-width: 611/16em;
 
             h2 {
-                font-size: 48/16em;
+                font-size: 32/16em;
                 margin-bottom: 42/48em;
+                color: #fff;
             }
 
             p {
                 margin-bottom: 20/18em;
+                color: #fff;
             }
 
             ul {
                 padding-left: 20/16em;
                 margin-bottom: 20/16em;
+                color: #fff;
 
                 li {
                     list-style: none;
                     display: flex;
                     justify-content: flex-start;
                     align-items: flex-start;
+                    color: #fff;
 
                     img {
                         margin-right: 10/16em;
@@ -48,6 +54,33 @@
 
             .button-solid {
                 margin-top: 25/14em;
+                // Transition Properties
+        color: #fff;
+        transition: color .3s;
+        transition-delay: .1s;
+
+        &:hover {
+            color: #000;
+            &:before {
+                width: 100%;
+            }
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 100%;
+            opacity: 1;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background-color: #fff;
+
+            //Transition properties
+            width: 0;
+            transition: width .3s;
+        }
             }
         }
 
@@ -58,18 +91,19 @@
             width: 611/16em;
             height: 861/16em;
             font-size:~"min(1.4vw, 1em)"; // scales the image-box down
-
             &:before {
                 content: '';
                 position: absolute;
                 display: block;
-                height: 100%;
+                height: 601/16em;
                 width: 100%;
                 background: var(--primary);
                 opacity: 1;
-                top: 40/16em;
+                top: 180/16em;
                 left: -40/16em;
             }
+
+
 
             &:after {
                 content: '';
@@ -77,6 +111,10 @@
                 display: block;
                 height: 516/16em;
                 width: 460/16em;
+                background: url("/images/content-circles.svg");
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
                 opacity: 1;
                 top: -226/16em;
                 right: -109/16em;
@@ -89,7 +127,7 @@
                 left: 0;
                 height: 100%;
                 width: 100%;
-                object-fit: cover;
+                object-fit: contain;
             }
         }
     }
@@ -98,14 +136,15 @@
 /* Inbetween */
 @media only screen and (min-width: 666px) {
     #sidebyside {
-        padding: 100/16em 0;
-    }
-}   
+        padding-top: 100/16em;
+}  
+}
 
 /* Small Desktop */
 @media only screen and (min-width: 1300px) {
     #sidebyside {
-        padding: 150/16em 0;
+        padding-top: 150/16em;
+        padding-bottom: 0;
         .container {
             max-width: 1391/16em;
             flex-direction: row;
@@ -116,11 +155,44 @@
         .content {
             margin: 0;
             width: 60%;
+            right: 40/16em;
+
+
+            h2 {
+                font-size: 48/16em;
+                margin-bottom: 42/48em;
+                color: #fff;
+            }
         }
 
         .image-box {
-            margin: 0;
-            margin-right: 170/16em;
+            display: block;
+            position: relative;
+            margin: auto;
+            width: 611/16em;
+            height: 861/16em;
+            top: -120/16em;
+            font-size:~"min(1.4vw, 1em)"; // scales the image-box down
+            &:before {
+                content: '';
+                position: absolute;
+                display: block;
+                height: 601/16em;
+                width: 100%;
+                background: var(--primary);
+                opacity: 1;
+                top: 180/16em;
+                left: -50/16em;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: -20/16em;
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
         }
     }
 }
@@ -214,10 +286,6 @@
             display: block;
             height: 1108/16em;
             width: 2000/16em;
-            background: url("../images/cta-squares.svg");
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
             opacity: 1;
             bottom: 0;
             left: 50%;
@@ -256,6 +324,356 @@
         #cta {
             &:after {
                 display: none;
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---          Team                -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+
+    .team {
+        border-radius: 5/16em;
+        margin: auto;
+        margin-top: 32/16em;
+        position: relative;
+        z-index: 100;
+        background: #fff;
+        width: 90%;
+        max-width: 1320/16em;
+        padding: 50/16em 20/16em;
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+        margin-bottom: 50/16em;
+        text-align: center; /* Ensures h1 is centered */
+        display: flex;
+        flex-direction: column; /* Ensures h1 is above cards in a column format */
+        align-items: center; /* Center align the children */
+        justify-content: center;
+
+        h1 {
+            margin-bottom: 50/16em; /* Space between h1 and cards */
+            font-size: 32/16em; /* Responsive font size */
+            color: #1a1a1a; /* Styling the h1 element */
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap; /* Ensures cards remain in row and wrap as needed */
+            justify-content: space-between; /* Spacing between cards */
+
+        .card {
+            display: block;
+            width: 100%;
+            max-width: 357/16em;
+            margin: auto;
+            margin-bottom: 50/16em;
+
+            picture {
+                background: var(--primary);
+                width: 158/16em;
+                height: 148/16em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+                margin-bottom: 23/16em;
+                border-radius: 50%;
+
+                img {
+                    width: 148/16em;
+                    height: 138/16em;
+                    border-radius: 50%;
+                }
+            }
+            h2 {
+                text-align: center;
+                font-size: 32/16em;
+                line-height: 21/20em;
+                font-weight: 700;
+                color: #1a1a1a;
+                width: 100%;
+                margin-bottom: 13/20em;
+            }
+            h3 {
+                text-align: center;
+                font-size: 21/16em;
+                line-height: 27/20em;
+                font-weight: 700;
+                color: var(--primary);
+                margin-bottom: 13/20em;
+            }
+            p {
+                text-align: center;
+                line-height: 24/18em;
+                font-size: 18/16em;
+                width: 100%;
+                opacity: .8;
+            }
+        }
+    }
+}
+}
+
+/* Inbetween */
+@media only screen and (min-width: 768px) {
+    .team {
+        padding: 50/16em 80/16em;
+        min-width: 100%;
+        text-align: center; /* Ensures h1 is centered */
+        display: flex;
+        flex-direction: column; /* Ensures h1 is above cards in a column format */
+        align-items: center; /* Center align the children */
+        justify-content: center;
+
+        h1 {
+            margin-bottom: 24/16em; /* Space between h1 and cards */
+            font-size: 48/16em; /* Responsive font size */
+            color: #1a1a1a; /* Styling the h1 element */
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap; /* Ensures cards remain in row and wrap as needed */
+            justify-content: space-around; /* Spacing between cards */
+
+        .card {
+            max-width: 285/16em;
+            height: 100%;
+
+            
+
+
+            h2 {
+                text-align: center;
+                font-size: 32/16em;
+                line-height: 27/20em;
+                font-weight: 700;
+                color: #1a1a1a;
+                margin-bottom: 5/20em;
+            }
+            h3 {
+                text-align: center;
+                font-size: 22/16em;
+                line-height: 27/20em;
+                font-weight: 700;
+                color: var(--primary);
+                margin-bottom: 10/20em;
+            }
+            p {
+                text-align: center;
+                line-height: 24/18em;
+                font-size: 16/16em;
+                width: 100%;
+                opacity: .8;
+            }
+        }
+    }
+}
+}
+
+/* Large Desktop */
+@media only screen and (min-width: 1300px) {
+    .team {
+        padding: 50/16em 80/16em;
+        min-width: 100%;
+        text-align: center; /* Ensures h1 is centered */
+        display: flex;
+        flex-direction: column; /* Ensures h1 is above cards in a column format */
+        align-items: center; /* Center align the children */
+        justify-content: center;
+
+        h1 {
+            margin-bottom: 24/16em; /* Space between h1 and cards */
+            font-size: 48/16em; /* Responsive font size */
+            color: #1a1a1a; /* Styling the h1 element */
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap; /* Ensures cards remain in row and wrap as needed */
+            justify-content: space-around; /* Spacing between cards */
+
+        .card {
+            max-width: 285/16em;
+            height: 100%;
+
+            
+
+
+            h2 {
+                text-align: center;
+                font-size: 32/16em;
+                line-height: 27/20em;
+                font-weight: 700;
+                color: #1a1a1a;
+                margin-bottom: 5/20em;
+            }
+            h3 {
+                text-align: center;
+                font-size: 22/16em;
+                line-height: 27/20em;
+                font-weight: 700;
+                color: var(--primary);
+                margin-bottom: 10/20em;
+            }
+            p {
+                text-align: center;
+                line-height: 24/18em;
+                font-size: 16/16em;
+                width: 100%;
+                opacity: .8;
+            }
+        }
+    }
+}
+}
+
+/*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+    #sidebyside-reverse {
+        padding: 50px 0;
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content {
+            order: 2;
+            margin: auto;
+            margin-top: 75/16em;
+            max-width: 611/16em;
+
+            h2 {
+                font-size: 28/16em;
+                margin-bottom: 42/48em;
+                color: var(--primary);
+            }
+
+            p {
+                margin-bottom: 20/18em;
+            }
+
+            ul {
+                padding-left: 20/16em;
+                margin-bottom: 20/16em;
+
+                li {
+                    list-style: none;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+
+                    img {
+                        margin-right: 10/16em;
+                        margin-top: 4/18em;
+                    }
+                }
+            }
+
+            .button-container {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                text-align: center;
+
+                .button-solid {
+                    margin-top: 25/14em;
+                    align-self: center;
+                }
+
+            }
+        }
+
+        .image-box {
+            display: block;
+            position: relative;
+            margin: auto;
+            width: 811/16em;
+            height: 661/16em;
+            font-size:~"min(1.4vw, 1em)"; // scales the image-box down
+
+
+            &:after {
+                content: '';
+                position: absolute;
+                display: block;
+                height: 516/16em;
+                width: 460/16em;
+                opacity: 1;
+                top: -226/16em;
+                right: -109/16em;
+                z-index: -1;
+             }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/* Inbetween */
+@media only screen and (min-width: 666px) {
+    #sidebyside-reverse {
+        padding: 100/16em 0;
+    }
+}   
+
+/* Small Desktop */
+@media only screen and (min-width: 1300px) {
+    #sidebyside-reverse {
+        padding: 100/16em 0;
+        .container {
+            max-width: 1391/16em;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .content {
+            margin: 0;
+            width: 60%;
+            order: 1;
+
+            h2 {
+                font-size: 48/16em;
+                margin-bottom: 42/48em;
+            }
+        }
+
+        .image-box {
+            margin: 0;
+            margin-left: 170/16em;
+            order: 2;
+
+            &:before {
+                left: auto;
+                right: -40/16em;
+            }
+
+            &:after {
+                right: auto;
+                left: -109/16em;
             }
         }
     }

@@ -8,6 +8,15 @@
     padding-bottom: 35%;
     position: relative;
     z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #portfolio h1 {
+    font-size: 3.625em;
+    margin-bottom: 1em;
+    color: var(--primary);
   }
   #portfolio .container {
     width: 96%;
@@ -15,72 +24,37 @@
     padding: 0;
     margin: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 1.875em;
-    font-size: min(1.3vw, 1em);
+    gap: 2.625em;
   }
   #portfolio .container .row {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 1.875em;
+    margin-left: 0;
   }
-  #portfolio .container .row:nth-of-type(1) picture:nth-of-type(1) {
-    width: 26.25em;
-    height: 35.4375em;
+  #portfolio .container .row h2 {
+    font-size: 2em;
+    color: black;
   }
-  #portfolio .container .row:nth-of-type(1) picture:nth-of-type(2) {
-    width: 26.25em;
-    height: 39.3125em;
-  }
-  #portfolio .container .row:nth-of-type(1) picture:nth-of-type(3) {
-    width: 26.25em;
-    height: 32em;
-  }
-  #portfolio .container .row:nth-of-type(2) picture:nth-of-type(1) {
-    width: 26.25em;
-    height: 30.75em;
-  }
-  #portfolio .container .row:nth-of-type(2) picture:nth-of-type(2) {
-    width: 26.25em;
-    height: 32.3125em;
-  }
-  #portfolio .container .row:nth-of-type(2) picture:nth-of-type(3) {
-    width: 26.25em;
-    height: 39.3125em;
-  }
-  #portfolio .container .row:nth-of-type(3) picture:nth-of-type(1) {
-    width: 26.25em;
-    height: 39.0625em;
-  }
-  #portfolio .container .row:nth-of-type(3) picture:nth-of-type(2) {
-    width: 26.25em;
-    height: 28.25em;
-  }
-  #portfolio .container .row:nth-of-type(3) picture:nth-of-type(3) {
-    width: 26.25em;
-    height: 39.3125em;
-  }
-  #portfolio .container .row picture {
-    position: relative;
-    display: block;
-  }
-  #portfolio .container .row picture img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 0.5em;
+  #portfolio .container .row h3 {
+    font-size: 1.25em;
+    color: black;
+    opacity: .7;
+    margin-top: -0.875em;
+    margin-bottom: 1.75em;
   }
 }
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
   #portfolio {
     padding: 9.375em 0;
+  }
+  #portfolio .row {
+    margin-left: 2.625em;
   }
 }
 /*-- -------------------------- -->
@@ -163,10 +137,6 @@
     display: block;
     height: 69.25em;
     width: 125em;
-    background: url("../images/cta-squares.svg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
     opacity: 1;
     bottom: 0;
     left: 50%;
@@ -199,5 +169,250 @@
 @media only screen and (min-width: 0em) {
   body.dark-mode #cta:after {
     display: none;
+  }
+}
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #sidebyside {
+    padding: 50px 0;
+  }
+  #sidebyside .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  #sidebyside .content {
+    order: 2;
+    margin: auto;
+    margin-top: 4.6875em;
+    max-width: 38.1875em;
+  }
+  #sidebyside .content h1 {
+    font-size: 2.625em;
+    text-align: left;
+    color: var(--primary);
+    margin-bottom: 0.33333333em;
+  }
+  #sidebyside .content h3 {
+    font-size: 2em;
+    margin-bottom: 0.875em;
+    text-align: left;
+    color: #4da8ff;
+  }
+  #sidebyside .content p {
+    margin-bottom: 1.11111111em;
+  }
+  #sidebyside .content ul {
+    padding-left: 1.25em;
+    margin-bottom: 1.25em;
+  }
+  #sidebyside .content ul li {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #sidebyside .content ul li img {
+    margin-right: 0.625em;
+    margin-top: 0.22222222em;
+  }
+  #sidebyside .content .button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+  #sidebyside .content .button-container .button-solid {
+    margin-top: 1.78571429em;
+    align-self: center;
+    margin-left: 1em;
+  }
+  #sidebyside .image-box {
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 50.6875em;
+    height: 41.3125em;
+    font-size: min(1.4vw, 1em);
+  }
+  #sidebyside .image-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+/* Inbetween */
+@media only screen and (min-width: 666px) {
+  #sidebyside {
+    padding: 6.25em 0;
+  }
+}
+/* Small Desktop */
+@media only screen and (min-width: 1300px) {
+  #sidebyside {
+    padding: 3.125em 0;
+  }
+  #sidebyside .container {
+    max-width: 86.9375em;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  #sidebyside .content {
+    margin: 0;
+    width: 60%;
+    margin-left: 6.25em;
+  }
+  #sidebyside .content h2 {
+    font-size: 3em;
+    margin-bottom: 0.875em;
+  }
+  #sidebyside .content h1 {
+    font-size: 3.625em;
+    text-align: left;
+    color: var(--primary);
+    margin-bottom: 0.33333333em;
+  }
+  #sidebyside .content h3 {
+    font-size: 2.625em;
+    margin-bottom: 0.875em;
+    text-align: left;
+    color: #4da8ff;
+  }
+  #sidebyside .image-box {
+    margin: 0;
+    width: 22.5625em;
+    height: 22.5625em;
+    font-size: min(1.4vw, 1em);
+  }
+}
+/*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #sidebyside-reverse {
+    padding: 50px 0;
+  }
+  #sidebyside-reverse .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  #sidebyside-reverse .content {
+    order: 2;
+    margin: auto;
+    margin-top: 4.6875em;
+    max-width: 38.1875em;
+  }
+  #sidebyside-reverse .content h1 {
+    font-size: 2.625em;
+    text-align: left;
+    color: var(--primary);
+    margin-bottom: 0.33333333em;
+  }
+  #sidebyside-reverse .content h3 {
+    font-size: 2em;
+    margin-bottom: 0.875em;
+    text-align: left;
+    color: #4da8ff;
+  }
+  #sidebyside-reverse .content p {
+    margin-bottom: 1.11111111em;
+  }
+  #sidebyside-reverse .content ul {
+    padding-left: 1.25em;
+    margin-bottom: 1.25em;
+  }
+  #sidebyside-reverse .content ul li {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #sidebyside-reverse .content ul li img {
+    margin-right: 0.625em;
+    margin-top: 0.22222222em;
+  }
+  #sidebyside-reverse .content .button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+  #sidebyside-reverse .content .button-container .button-solid {
+    margin-top: 1.78571429em;
+    align-self: center;
+  }
+  #sidebyside-reverse .image-box {
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 50.6875em;
+    height: 41.3125em;
+    font-size: min(1.4vw, 1em);
+  }
+  #sidebyside-reverse .image-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+/* Inbetween */
+@media only screen and (min-width: 666px) {
+  #sidebyside-reverse {
+    padding: 6.25em 0;
+  }
+}
+/* Small Desktop */
+@media only screen and (min-width: 1300px) {
+  #sidebyside-reverse {
+    padding: 3.125em 0;
+  }
+  #sidebyside-reverse .container {
+    max-width: 86.9375em;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #sidebyside-reverse .content {
+    margin: 0;
+    width: 50%;
+    order: 1;
+  }
+  #sidebyside-reverse .content h2 {
+    font-size: 3em;
+    margin-bottom: 0.875em;
+  }
+  #sidebyside-reverse .content h1 {
+    font-size: 3.625em;
+    text-align: left;
+    color: var(--primary);
+    margin-bottom: 0.33333333em;
+  }
+  #sidebyside-reverse .content h3 {
+    font-size: 2.625em;
+    margin-bottom: 0.875em;
+    text-align: left;
+    color: #4da8ff;
+  }
+  #sidebyside-reverse .image-box {
+    margin: 0;
+    margin-left: 6.25em;
+    order: 2;
+    width: 22.5625em;
+    height: 22.5625em;
+    font-size: min(1.4vw, 1em);
   }
 }

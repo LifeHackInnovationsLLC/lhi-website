@@ -4,7 +4,7 @@
 /* Mobile */
 @media only screen and (min-width: 0em) {
   :root {
-    --primary: #4389B9;
+    --primary: #176ca8;
     --primaryShade: #ffd675;
     --primaryDark: #805d0d;
     --bodyText: #1a1a1a;
@@ -98,7 +98,7 @@
     position: relative;
     z-index: 1;
     background-color: var(--primary);
-    color: #000;
+    color: #fff;
     transition: color .3s;
     transition-delay: .1s;
   }
@@ -306,13 +306,8 @@
     position: absolute;
     display: block;
     height: 0.42105263em;
-    background: var(--primary);
+    color: var(--primary);
     opacity: 1;
-    bottom: 0.26315789em;
-    border-radius: 0.21052632em;
-    left: -0.31578947em;
-    right: -0.31578947em;
-    z-index: -1;
   }
   #navigation #navbar-menu.open {
     height: 19.125em;
@@ -433,6 +428,9 @@
   }
   #navigation #navbar-menu ul li a:hover:before {
     width: 100%;
+  }
+  #navigation #navbar-menu ul li a.active {
+    color: var(--primary);
   }
   #navigation #navbar-menu ul li a.active:before {
     content: '';
@@ -599,20 +597,18 @@
 @media only screen and (min-width: 0em) {
   #footer {
     background: #1C1C1C;
-    padding: 5.25em 0 1.25em;
+    padding: 1em 0 1em;
     font-size: min(4vw, 1.2em);
   }
   #footer .left-section {
     margin: auto;
-    margin-bottom: 3.125em;
     text-align: center;
   }
   #footer .left-section .logo {
     display: inline-block;
     margin: auto;
     width: auto;
-    height: 3.125em;
-    margin-bottom: 1.875em;
+    height: 17.5em;
     text-align: center;
   }
   #footer .left-section .logo img {
@@ -691,7 +687,7 @@
     display: block;
     height: 0.11111111em;
     width: 5.38888889em;
-    background: #EEBE76;
+    background: var(--primary);
     opacity: 1;
     bottom: -0.88888889em;
     left: 0;
@@ -751,7 +747,9 @@
   #footer .left-section .logo {
     text-align: left;
     margin-left: 0;
-    height: 4.375em;
+    height: 21.25em;
+    width: auto;
+    margin-top: -2.625em;
   }
   #footer .left-section p {
     text-align: left;
@@ -761,6 +759,7 @@
     margin: 0;
     width: 38.0625em;
     max-width: none;
+    margin-top: 5.125em;
   }
   #footer .right-section .lists {
     width: 96%;

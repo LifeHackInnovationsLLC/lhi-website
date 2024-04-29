@@ -4,7 +4,9 @@
 /* Mobile */
 @media only screen and (min-width: 0em) {
   #sidebyside {
-    padding: 50px 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #000;
   }
   #sidebyside .container {
     display: flex;
@@ -15,25 +17,29 @@
   #sidebyside .content {
     order: 2;
     margin: auto;
-    margin-top: 4.6875em;
+    margin-top: 2.8125em;
     max-width: 38.1875em;
   }
   #sidebyside .content h2 {
-    font-size: 3em;
+    font-size: 2em;
     margin-bottom: 0.875em;
+    color: #fff;
   }
   #sidebyside .content p {
     margin-bottom: 1.11111111em;
+    color: #fff;
   }
   #sidebyside .content ul {
     padding-left: 1.25em;
     margin-bottom: 1.25em;
+    color: #fff;
   }
   #sidebyside .content ul li {
     list-style: none;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    color: #fff;
   }
   #sidebyside .content ul li img {
     margin-right: 0.625em;
@@ -41,6 +47,28 @@
   }
   #sidebyside .content .button-solid {
     margin-top: 1.78571429em;
+    color: #fff;
+    transition: color .3s;
+    transition-delay: .1s;
+  }
+  #sidebyside .content .button-solid:hover {
+    color: #000;
+  }
+  #sidebyside .content .button-solid:hover:before {
+    width: 100%;
+  }
+  #sidebyside .content .button-solid:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #fff;
+    width: 0;
+    transition: width .3s;
   }
   #sidebyside .image-box {
     display: block;
@@ -54,11 +82,11 @@
     content: '';
     position: absolute;
     display: block;
-    height: 100%;
+    height: 37.5625em;
     width: 100%;
     background: var(--primary);
     opacity: 1;
-    top: 2.5em;
+    top: 11.25em;
     left: -2.5em;
   }
   #sidebyside .image-box:after {
@@ -67,6 +95,10 @@
     display: block;
     height: 32.25em;
     width: 28.75em;
+    background: url("/images/content-circles.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     opacity: 1;
     top: -14.125em;
     right: -6.8125em;
@@ -78,19 +110,20 @@
     left: 0;
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 }
 /* Inbetween */
 @media only screen and (min-width: 666px) {
   #sidebyside {
-    padding: 6.25em 0;
+    padding-top: 6.25em;
   }
 }
 /* Small Desktop */
 @media only screen and (min-width: 1300px) {
   #sidebyside {
-    padding: 9.375em 0;
+    padding-top: 9.375em;
+    padding-bottom: 0;
   }
   #sidebyside .container {
     max-width: 86.9375em;
@@ -101,10 +134,40 @@
   #sidebyside .content {
     margin: 0;
     width: 60%;
+    right: 2.5em;
+  }
+  #sidebyside .content h2 {
+    font-size: 3em;
+    margin-bottom: 0.875em;
+    color: #fff;
   }
   #sidebyside .image-box {
-    margin: 0;
-    margin-right: 10.625em;
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 38.1875em;
+    height: 53.8125em;
+    top: -7.5em;
+    font-size: min(1.4vw, 1em);
+  }
+  #sidebyside .image-box:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 37.5625em;
+    width: 100%;
+    background: var(--primary);
+    opacity: 1;
+    top: 11.25em;
+    left: -3.125em;
+  }
+  #sidebyside .image-box img {
+    position: absolute;
+    top: 0;
+    left: -1.25em;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
   }
 }
 /*-- -------------------------- -->
@@ -187,10 +250,6 @@
     display: block;
     height: 69.25em;
     width: 125em;
-    background: url("../images/cta-squares.svg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
     opacity: 1;
     bottom: 0;
     left: 50%;
@@ -223,5 +282,333 @@
 @media only screen and (min-width: 0em) {
   body.dark-mode #cta:after {
     display: none;
+  }
+}
+/*-- -------------------------- -->
+<---          Team                -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  .team {
+    border-radius: 0.3125em;
+    margin: auto;
+    margin-top: 2em;
+    position: relative;
+    z-index: 100;
+    background: #fff;
+    width: 90%;
+    max-width: 82.5em;
+    padding: 3.125em 1.25em;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+    margin-bottom: 3.125em;
+    text-align: center;
+    /* Ensures h1 is centered */
+    display: flex;
+    flex-direction: column;
+    /* Ensures h1 is above cards in a column format */
+    align-items: center;
+    /* Center align the children */
+    justify-content: center;
+  }
+  .team h1 {
+    margin-bottom: 3.125em;
+    /* Space between h1 and cards */
+    font-size: 2em;
+    /* Responsive font size */
+    color: #1a1a1a;
+    /* Styling the h1 element */
+  }
+  .team .container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* Ensures cards remain in row and wrap as needed */
+    justify-content: space-between;
+    /* Spacing between cards */
+  }
+  .team .container .card {
+    display: block;
+    width: 100%;
+    max-width: 22.3125em;
+    margin: auto;
+    margin-bottom: 3.125em;
+  }
+  .team .container .card picture {
+    background: var(--primary);
+    width: 9.875em;
+    height: 9.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 1.4375em;
+    border-radius: 50%;
+  }
+  .team .container .card picture img {
+    width: 9.25em;
+    height: 8.625em;
+    border-radius: 50%;
+  }
+  .team .container .card h2 {
+    text-align: center;
+    font-size: 2em;
+    line-height: 1.05em;
+    font-weight: 700;
+    color: #1a1a1a;
+    width: 100%;
+    margin-bottom: 0.65em;
+  }
+  .team .container .card h3 {
+    text-align: center;
+    font-size: 1.3125em;
+    line-height: 1.35em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.65em;
+  }
+  .team .container .card p {
+    text-align: center;
+    line-height: 1.33333333em;
+    font-size: 1.125em;
+    width: 100%;
+    opacity: .8;
+  }
+}
+/* Inbetween */
+@media only screen and (min-width: 768px) {
+  .team {
+    padding: 3.125em 5em;
+    min-width: 100%;
+    text-align: center;
+    /* Ensures h1 is centered */
+    display: flex;
+    flex-direction: column;
+    /* Ensures h1 is above cards in a column format */
+    align-items: center;
+    /* Center align the children */
+    justify-content: center;
+  }
+  .team h1 {
+    margin-bottom: 1.5em;
+    /* Space between h1 and cards */
+    font-size: 3em;
+    /* Responsive font size */
+    color: #1a1a1a;
+    /* Styling the h1 element */
+  }
+  .team .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* Ensures cards remain in row and wrap as needed */
+    justify-content: space-around;
+    /* Spacing between cards */
+  }
+  .team .container .card {
+    max-width: 17.8125em;
+    height: 100%;
+  }
+  .team .container .card h2 {
+    text-align: center;
+    font-size: 2em;
+    line-height: 1.35em;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.25em;
+  }
+  .team .container .card h3 {
+    text-align: center;
+    font-size: 1.375em;
+    line-height: 1.35em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5em;
+  }
+  .team .container .card p {
+    text-align: center;
+    line-height: 1.33333333em;
+    font-size: 1em;
+    width: 100%;
+    opacity: .8;
+  }
+}
+/* Large Desktop */
+@media only screen and (min-width: 1300px) {
+  .team {
+    padding: 3.125em 5em;
+    min-width: 100%;
+    text-align: center;
+    /* Ensures h1 is centered */
+    display: flex;
+    flex-direction: column;
+    /* Ensures h1 is above cards in a column format */
+    align-items: center;
+    /* Center align the children */
+    justify-content: center;
+  }
+  .team h1 {
+    margin-bottom: 1.5em;
+    /* Space between h1 and cards */
+    font-size: 3em;
+    /* Responsive font size */
+    color: #1a1a1a;
+    /* Styling the h1 element */
+  }
+  .team .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* Ensures cards remain in row and wrap as needed */
+    justify-content: space-around;
+    /* Spacing between cards */
+  }
+  .team .container .card {
+    max-width: 17.8125em;
+    height: 100%;
+  }
+  .team .container .card h2 {
+    text-align: center;
+    font-size: 2em;
+    line-height: 1.35em;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.25em;
+  }
+  .team .container .card h3 {
+    text-align: center;
+    font-size: 1.375em;
+    line-height: 1.35em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5em;
+  }
+  .team .container .card p {
+    text-align: center;
+    line-height: 1.33333333em;
+    font-size: 1em;
+    width: 100%;
+    opacity: .8;
+  }
+}
+/*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #sidebyside-reverse {
+    padding: 50px 0;
+  }
+  #sidebyside-reverse .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  #sidebyside-reverse .content {
+    order: 2;
+    margin: auto;
+    margin-top: 4.6875em;
+    max-width: 38.1875em;
+  }
+  #sidebyside-reverse .content h2 {
+    font-size: 1.75em;
+    margin-bottom: 0.875em;
+    color: var(--primary);
+  }
+  #sidebyside-reverse .content p {
+    margin-bottom: 1.11111111em;
+  }
+  #sidebyside-reverse .content ul {
+    padding-left: 1.25em;
+    margin-bottom: 1.25em;
+  }
+  #sidebyside-reverse .content ul li {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #sidebyside-reverse .content ul li img {
+    margin-right: 0.625em;
+    margin-top: 0.22222222em;
+  }
+  #sidebyside-reverse .content .button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+  #sidebyside-reverse .content .button-container .button-solid {
+    margin-top: 1.78571429em;
+    align-self: center;
+  }
+  #sidebyside-reverse .image-box {
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 50.6875em;
+    height: 41.3125em;
+    font-size: min(1.4vw, 1em);
+  }
+  #sidebyside-reverse .image-box:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 32.25em;
+    width: 28.75em;
+    opacity: 1;
+    top: -14.125em;
+    right: -6.8125em;
+    z-index: -1;
+  }
+  #sidebyside-reverse .image-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+/* Inbetween */
+@media only screen and (min-width: 666px) {
+  #sidebyside-reverse {
+    padding: 6.25em 0;
+  }
+}
+/* Small Desktop */
+@media only screen and (min-width: 1300px) {
+  #sidebyside-reverse {
+    padding: 6.25em 0;
+  }
+  #sidebyside-reverse .container {
+    max-width: 86.9375em;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  #sidebyside-reverse .content {
+    margin: 0;
+    width: 60%;
+    order: 1;
+  }
+  #sidebyside-reverse .content h2 {
+    font-size: 3em;
+    margin-bottom: 0.875em;
+  }
+  #sidebyside-reverse .image-box {
+    margin: 0;
+    margin-left: 10.625em;
+    order: 2;
+  }
+  #sidebyside-reverse .image-box:before {
+    left: auto;
+    right: -2.5em;
+  }
+  #sidebyside-reverse .image-box:after {
+    right: auto;
+    left: -6.8125em;
   }
 }

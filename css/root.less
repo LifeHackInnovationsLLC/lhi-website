@@ -7,7 +7,7 @@
 
     // Website colors
     :root {
-        --primary: #4389B9;
+        --primary: #176ca8;
         --primaryShade: #ffd675;
         --primaryDark: #805d0d;
         --bodyText: #1a1a1a;
@@ -106,7 +106,7 @@
         background-color: var(--primary);
 
         // Transition Properties
-        color: #000;
+        color: #fff;
         transition: color .3s;
         transition-delay: .1s;
 
@@ -354,13 +354,8 @@
                                 position: absolute;
                                 display: block;
                                 height: 8/19em;
-                                background: var(--primary);
+                                color: var(--primary);
                                 opacity: 1;
-                                bottom: 5/19em;
-                                border-radius: 4/19em;
-                                left: -6/19em;
-                                right: -6/19em;
-                                z-index: -1;
                             }
                         }
                     }
@@ -549,6 +544,7 @@
 
                         // Active State
                         &.active {
+                            color: var(--primary);
                             &:before {
                                 content: '';
                                 position: absolute;
@@ -782,19 +778,17 @@
 
     #footer {
         background: #1C1C1C;
-        padding: 84/16em 0 20/16em;
+        padding: 16/16em 0 16/16em;
         font-size:~"min(4vw, 1.2em)";
 
         .left-section {
             margin: auto;
-            margin-bottom: 50/16em;
             text-align: center;
             .logo {
                 display: inline-block;
                 margin: auto;
 				width: auto;
-                height: 50/16em;
-                margin-bottom: 30/16em;
+                height: 280/16em;
                 text-align: center;
 
                 img {
@@ -878,7 +872,7 @@
 							display: block;
 							height: 2/18em;
 							width: 97/18em;
-							background: #EEBE76;
+							background: var(--primary);
 							opacity: 1;
 							bottom: -16/18em;
 							left: 0;
@@ -952,7 +946,9 @@
             .logo {
                 text-align: left;
 				margin-left: 0;
-                height: 70/16em;
+                height: 340/16em;
+                width: auto;
+                margin-top: -42/16em;
             }
 
             p {
@@ -965,6 +961,7 @@
             margin: 0;
             width: 609/16em;
             max-width: none;
+            margin-top: 82/16em;
             .lists {
                 width: 96%;
                 max-width: 769/16em;
