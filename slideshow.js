@@ -1,7 +1,7 @@
 const slideshowContainer = document.querySelector('.slideshow-container');
 const slides = Array.from(slideshowContainer.children);
 let offset = 0;
-const speed = 3.5; // Adjust this value to change the speed of the slideshow
+const speed = 4.5; // Adjust this value to change the speed of the slideshow
 
 // Clone the slides and append them to the end of the slideshow
 slides.forEach(slide => {

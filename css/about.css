@@ -348,6 +348,8 @@
     width: 9.25em;
     height: 8.625em;
     border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%;
   }
   .team .container .card h2 {
     text-align: center;
