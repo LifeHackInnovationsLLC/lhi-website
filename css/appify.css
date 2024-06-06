@@ -216,6 +216,16 @@
     margin-top: 4.6875em;
     max-width: 38.1875em;
   }
+  #sidebyside .content .appstores {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #sidebyside .content .appstores img {
+    margin-top: -3.375em;
+    margin-bottom: -2.625em;
+  }
   #sidebyside .content h1 {
     font-size: 2.625em;
     text-align: left;
@@ -294,6 +304,16 @@
     margin: 0;
     width: 60%;
     margin-left: 6.25em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #sidebyside .content .appstores {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.125em;
   }
   #sidebyside .content h2 {
     font-size: 3em;
