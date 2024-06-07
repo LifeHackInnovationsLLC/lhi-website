@@ -712,9 +712,9 @@
     font-size: 1em;
   }
   #footer .credit a {
-    color: var(--primary);
+    color: #fff;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 1.125em;
   }
   #footer .credit a:hover {
     text-decoration: underline;
