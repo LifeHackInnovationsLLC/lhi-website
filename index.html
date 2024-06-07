@@ -109,7 +109,7 @@
                 </div>
             </div>
             <video autoplay muted playsinline id="heroVideo">
-                <source src="./videos/sting.mp4" type="video/mp4">
+                <source src="https://lifehackinnovationsllc.github.io/lhi-website/videos/sting.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </section>
@@ -394,13 +394,7 @@
                 this.currentTime = this.duration; // Seek to the last second
                 this.pause(); // Pause the video
             }, false);
-
-             // Error handling functionality
-        video.addEventListener('error', function(e) {
-            console.error("An error occurred while loading the video:", e);
-            // Handle the error (e.g., display a message to the user, load a fallback video, etc.)
-            alert("An error occurred while loading the video. Please try again later.");
-        });
+            
         });
         </script>
  
