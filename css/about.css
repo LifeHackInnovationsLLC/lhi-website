@@ -95,10 +95,6 @@
     display: block;
     height: 32.25em;
     width: 28.75em;
-    background: url("/images/content-circles.svg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
     opacity: 1;
     top: -14.125em;
     right: -6.8125em;
