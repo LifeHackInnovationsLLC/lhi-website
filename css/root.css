@@ -269,7 +269,7 @@
   }
   #navigation #navbar-menu ul li {
     list-style: none;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.75em;
     text-align: center;
     transform-style: preserve-3d;
     opacity: 0;
@@ -310,8 +310,8 @@
     opacity: 1;
   }
   #navigation #navbar-menu.open {
-    height: 22.625em;
-    padding-top: 1.25em;
+    height: 25.125em;
+    padding-top: 1.875em;
     z-index: -100;
   }
   #navigation #navbar-menu.open ul li {
