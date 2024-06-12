@@ -40,7 +40,7 @@
     font-size: 2em;
     color: black;
   }
-  #portfolio .container .row h2 {
+  #portfolio .container .row h3 {
     font-size: 1.25em;
     color: black;
     opacity: .7;
@@ -197,7 +197,7 @@
     color: var(--primary);
     margin-bottom: 0.33333333em;
   }
-  #sidebyside .content h2 {
+  #sidebyside .content h3 {
     font-size: 2em;
     margin-bottom: 0.875em;
     text-align: left;
@@ -280,7 +280,7 @@
     color: var(--primary);
     margin-bottom: 0.33333333em;
   }
-  #sidebyside .content h2 {
+  #sidebyside .content h3 {
     font-size: 2.625em;
     margin-bottom: 0.875em;
     text-align: left;
@@ -319,7 +319,7 @@
     color: var(--primary);
     margin-bottom: 0.33333333em;
   }
-  #sidebyside-reverse .content h2 {
+  #sidebyside-reverse .content h3 {
     font-size: 2em;
     margin-bottom: 0.875em;
     text-align: left;
@@ -401,7 +401,7 @@
     color: var(--primary);
     margin-bottom: 0.33333333em;
   }
-  #sidebyside-reverse .content h2 {
+  #sidebyside-reverse .content h3 {
     font-size: 2.625em;
     margin-bottom: 0.875em;
     text-align: left;
