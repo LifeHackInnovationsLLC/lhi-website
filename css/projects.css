@@ -201,7 +201,7 @@
     font-size: 2em;
     margin-bottom: 0.875em;
     text-align: left;
-    color: #4da8ff;
+    color: black;
   }
   #sidebyside .content p {
     margin-bottom: 1.11111111em;
@@ -284,7 +284,7 @@
     font-size: 2.625em;
     margin-bottom: 0.875em;
     text-align: left;
-    color: #4da8ff;
+    color: black;
   }
   #sidebyside .image-box {
     margin: 0;
@@ -323,7 +323,7 @@
     font-size: 2em;
     margin-bottom: 0.875em;
     text-align: left;
-    color: #4da8ff;
+    color: black;
   }
   #sidebyside-reverse .content p {
     margin-bottom: 1.11111111em;
@@ -405,7 +405,7 @@
     font-size: 2.625em;
     margin-bottom: 0.875em;
     text-align: left;
-    color: #4da8ff;
+    color: black;
   }
   #sidebyside-reverse .image-box {
     margin: 0;
