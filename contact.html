@@ -28,7 +28,6 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Preload -->
-    <link rel="preload" as="image" href="./images/cabinets2-m.jpg">
     <link rel="preload" as="font" type="font/woff2" href="fonts/roboto-v29-latin-regular.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="fonts/roboto-v29-latin-700.woff2" crossorigin>
 
@@ -59,10 +58,10 @@
             <!--Logo - Get SVGs if you can.  I use fiverr to get png's turned into SVGs. Highly recommend it, worth the $20 - get a light and dark version-->
             <a class="logo" aria-label="click to go to home page" href="index.html">
                 <!--Light Colored Logo, remove .dark image tag and the .light class if you don't have a dark and light version -->
-                <img class="light" aria-hidden="true" src="./images/logo.png" decoding="async" alt="logo" width="221" height="66">
+                <img class="light" aria-hidden="true" src="./images/logo.png" decoding="async" alt="logo">
 
                 <!--Dark Colored Logo-->
-                <img class="dark" aria-hidden="true" src="./images/logo.png" decoding="async" loading="lazy" alt="logo" width="221" height="66">
+                <img class="dark" aria-hidden="true" src="./images/logo.png" decoding="async" loading="lazy" alt="logo">
             </a>
 
             <!--Main Nav-->
@@ -210,7 +209,6 @@
             <span class="copyright"> Copyright 2024 - Present</span></div>
     </footer>
     <script defer src="./nav.js"></script>
-    <script defer src="./dark.js"></script>
     <!--
         This script adds a class to the body after scrolling 100px
         and we used these body.scroll styles to create some on scroll 
