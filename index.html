@@ -5,12 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Swap our for actual link-->
+    <!--Swap out for actual link-->
     <link rel="canonical" href="https://www.company.com">
 
     <meta name="description" content="Life Hack Innovations is a forward-thinking technology company specializing in mobile and web app development, custom software solutions, and digital transformation. We empower businesses with cutting-edge technology for growth and efficiency.">
     <meta name="keywords" content="Life Hack Innovations, app development, mobile solutions, web development, custom software, digital transformation, AI, IoT, geolocation, business growth, technology company">
-    
 
     <!--Social Media Display-->
     <meta property="og:title" content=""/>
@@ -21,7 +20,6 @@
     <meta property="og:image:secure_url" content="./images/social.jpg"/>
 
     <!--Favicons-->
-    <!--Use https://realfavicongenerator.net/ to generate and download your favicons-->
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
@@ -40,84 +38,126 @@
     <!--Defer loading the whole page css-->
     <link rel="stylesheet" href="./css/local.css" media="print" onload="this.media='all'; this.onload=null;">
 
-    <!--If the user has javascript disbaled, load this stylesheet-->
+    <!--If the user has javascript disabled, load this stylesheet-->
     <noscript>
         <link rel="stylesheet" href="./css/local.css">
     </noscript>
 
     <title>Life Hack Innovations | Custom Apps and Mobile Solutions | Broward County, Florida</title>
+
+    <!-- Embedded CSS -->
+    <style>
+        /* Container to position the img and video */
+        .logo-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Master logo image */
+        .logo-image {
+            display: block;
+            width: 100%; /* Adjust width as needed */
+            height: auto;
+            max-width: 200px; /* Set a max width as needed */
+        }
+
+        /* Slave video, overlaying the image */
+        .logo-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure video covers the img area */
+            pointer-events: none; /* Allow clicks to pass through to img/link */
+        }
+
+        /* Media queries to control the logo size at different screen widths */
+        @media (max-width: 768px) {
+            .logo-image {
+                max-width: 150px; /* Adjust this value to control the size */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-image {
+                max-width: 100px; /* Adjust this value to control the size */
+            }
+        }
+    </style>
 </head>
 <body>
-    <!--Screen reader skip main nav-->
-    <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
+<!--Screen reader skip main nav-->
+<a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
 
-    <!-- ============================================ -->
-    <!--                 Navigation                   -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
 
-    <div id="navigation">
-        <div aria-hidden="true" class="background-color-div">
-            <!--This div is used to overcome a z-index issue where the open
-                #navbar-menu is on top of the #navigation. This bar places itself 
-                the #navbar-menu so that menu appears behind the #navigation
-            -->
-        </div>
-        <div class="container">
-            <!--Logo - Get SVGs if you can.  I use fiverr to get png's turned into SVGs. Highly recommend it, worth the $20 - get a light and dark version-->
-            <a class="logo" aria-label="click to go to home page" href="index.html">
-                <!--Light Colored Logo, remove .dark image tag and the .light class if you don't have a dark and light version -->
-                <img aria-hidden="true" src="./images/logo.png" decoding="async" alt="logo" >
-
-                <!--Dark Colored Logo-->
-            </a>
-
-            <!--Main Nav-->
-            <nav id="navbar-menu">
-                <ul>
-                    <li><a class="active" href="index.html">Home</a></li>
-                    <li><a href="appify.html">App-ify</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="service.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-
-           
-
-            <!--Mobile Nav toggle-->
-            <button aria-label="hamburger menu" class="hamburger-menu">
-                <span aria-hidden="true"></span>
-            </button>
-        </div>
+<div id="navigation">
+    <div aria-hidden="true" class="background-color-div">
+        <!--This div is used to overcome a z-index issue where the open
+            #navbar-menu is on top of the #navigation. This bar places itself
+            the #navbar-menu so that menu appears behind the #navigation
+        -->
     </div>
-
-    <main id="main">
-        <!-- ============================================ -->
-        <!--                    LANDING                   -->
-        <!-- ============================================ -->
-    
-        <section id="hero">
-            <div class="hero-content">
-                <div class="heroText">
-                   <!--  <h1 id="home-h">AI-Driven Innovation in App Development for Everyone</h1>
-                    <p>
-                        Empower Your Ideas With App-ify or Let Us Craft Your Custom Solution
-                    </p>
-                    <a class="button-solid" href="/contact.html" target="_blank" rel="noopener">
-                            Contact Us Today
-                    </a> -->
-                </div>
+    <div class="container">
+        <!--Logo - Get SVGs if you can.  I use fiverr to get png's turned into SVGs. Highly recommend it, worth the $20 - get a light and dark version-->
+        <a class="logo" aria-label="click to go to home page" href="index.html">
+            <div class="logo-container">
+                <img class="logo-image" aria-hidden="true" src="./images/logo.png" decoding="async" alt="logo">
+                <video class="logo-video" autoplay muted loop playsinline aria-hidden="true" style="transform: translateX(-30%)">
+                    <source src="./videos/spline.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
             </div>
-            <video autoplay muted playsinline id="heroVideo">
-                <source src="https://lifehackinnovationsllc.github.io/lhi-website/videos/sting.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </section>
+        </a>
 
-        <!-- ============================================ -->
-        <!--                  Services                    -->
-        <!-- ============================================ -->
+        <!--Main Nav-->
+        <nav id="navbar-menu">
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="appify.html">App-ify</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!--Mobile Nav toggle-->
+        <button aria-label="hamburger menu" class="hamburger-menu">
+            <span aria-hidden="true"></span>
+        </button>
+    </div>
+</div>
+
+<main id="main">
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+    <section id="hero">
+        <div class="hero-content">
+            <div class="heroText">
+                <!--  <h1 id="home-h">AI-Driven Innovation in App Development for Everyone</h1>
+                 <p>
+                     Empower Your Ideas With App-ify or Let Us Craft Your Custom Solution
+                 </p>
+                 <a class="button-solid" href="/contact.html" target="_blank" rel="noopener">
+                         Contact Us Today
+                 </a> -->
+            </div>
+        </div>
+        <video autoplay muted playsinline id="heroVideo">
+            <source src="https://lifehackinnovationsllc.github.io/lhi-website/videos/sting.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                  Services                    -->
+    <!-- ============================================ -->
 
         <section id="services" class="services">
             <div class="card">
@@ -160,7 +200,7 @@
                     <source media="(min-width: 601px)" srcset="./images/logo-nameless.png">
                     <img aria-hidden="true" loading="lazy" decoding="async" src="./images/logo-nameless.png" alt="Innovative Solutions" width="400" height="662">
                 </picture>
-                
+
                 <h2 class="title">Introducing App-ify</h2>
                 <p>
                     App-ify is a user-friendly mobile app builder that enables individuals to create customized mobile applications from their phone. App-ify allows users to build their own mobile apps with ease, without requiring any coding knowledge. This platform provides an affordable and accessible way for anyone to create a mobile app that is tailored to their needs. With App-ify, users can quickly and easily build their own apps, whether it's for personal or business use.
@@ -173,7 +213,7 @@
                 <img aria-hidden="true" loading="lazy" decoding="async" src="./images/tech.jpg" alt="Call to Action" width="1920" height="1280">
              </picture>
         </section>
-        
+
 
         <!-- ============================================ -->
         <!--                   About                      -->
@@ -213,7 +253,7 @@
                     <div class="button-container">
                         <a class="button-solid" href="./about.html">More About Us</a>
                     </div>
-                    
+
                 </div>
                 <picture class="image-box">
                     <source media="(max-width: 600px)" srcset="./images/solutions-m.webp">
@@ -222,7 +262,7 @@
                 </picture>
             </div>
         </section>
-        
+
 
         <!-- ============================================ -->
         <!--          Extra Content For Ranking           -->
@@ -317,7 +357,7 @@
                 </div>
             </div>
         </section>
-        
+
 
         <!-- ============================================ -->
         <!--             Final Call to Action             -->
@@ -337,7 +377,7 @@
                 <img aria-hidden="true" loading="lazy" decoding="async" src="./images/cta.jpg" alt="Call to Action" width="1920" height="1280">
              </picture>
         </section>
-        
+
     </main>
 
     <!-- ============================================ -->
@@ -395,12 +435,12 @@
                 this.currentTime = this.duration; // Seek to the last second
                 this.pause(); // Pause the video
             }, false);
-            
+
         });
         </script>
- 
+
     <script defer>
-        document.addEventListener('scroll', (e) => { 
+        document.addEventListener('scroll', (e) => {
             const scroll = document.documentElement.scrollTop;
             if(scroll >= 100){
         document.querySelector('body').classList.add('scroll')
